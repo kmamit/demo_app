@@ -12,4 +12,24 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require_tree .
+$(document).ready(function() {
+ 
+	$('.btn-primary').click(function(){
+		$("#place").html('<div class = "load"><h1>Loading...</h1></div>');
+	});
+	
+  
+  
+  $("#places_search").submit(function(){
+		  
+						
+		 	$.get(this.action, $(this).serialize(),null,"script");
+						
+				return false;
+			
+        
+   });
+	   
+});

@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DemoApp</title>
+  <title>Partyplanner</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class = "show" >
+<%= render 'header' %>
+<div id = "body" >
 
-<%= yield %>
+	<div class = "container">
 
+		<%= yield %>
+	</div>
+</div>
 </body>
 </html>
